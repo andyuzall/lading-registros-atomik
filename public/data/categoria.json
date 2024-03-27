@@ -1,0 +1,166 @@
+[
+    {
+        "id": 1,
+        "nombre": "Honorarios",
+        "subCategoria":[
+            {
+                "id": 101,
+                "nombre": "Honorario fijo"
+            },
+            {
+                "id": 102,
+                "nombre": "Comisiones"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Impuestos",
+        "pais":[
+            {
+                "id": 201,
+                "nombre": "Uruguay"
+            },
+            {
+                "id": 202,
+                "nombre": "Argentina"
+            },
+            {
+                "id": 203,
+                "nombre": "Ecuador"
+            },
+            {
+                "id": 204,
+                "nombre": "Colombia"
+            },
+            {
+                "id": 205,
+                "nombre": "Paraguay"
+            },
+            {
+                "id": 206,
+                "nombre": "Chile"
+            },
+            {
+                "id": 207,
+                "nombre": "Perú"
+            },
+            {
+                "id": 208,
+                "nombre": "Honduras"
+            },
+            {
+                "id": 209,
+                "nombre": "Guatemala"
+            },
+            {
+                "id": 210,
+                "nombre": "Costa Rica"
+            },
+            {
+                "id": 211,
+                "nombre": "Republica Dominicana"
+            },
+            {
+                "id": 212,
+                "nombre": "Panamá"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Estudios contables",
+        "pais":[
+            {
+                "id": 201,
+                "nombre": "Uruguay"
+            },
+            {
+                "id": 202,
+                "nombre": "Argentina"
+            },
+            {
+                "id": 203,
+                "nombre": "Ecuador"
+            },
+            {
+                "id": 204,
+                "nombre": "Colombia"
+            },
+            {
+                "id": 205,
+                "nombre": "Paraguay"
+            },
+            {
+                "id": 206,
+                "nombre": "Chile"
+            },
+            {
+                "id": 207,
+                "nombre": "Perú"
+            },
+            {
+                "id": 208,
+                "nombre": "Honduras"
+            },
+            {
+                "id": 209,
+                "nombre": "Guatemala"
+            },
+            {
+                "id": 210,
+                "nombre": "Costa Rica"
+            },
+            {
+                "id": 211,
+                "nombre": "Republica Dominicana"
+            },
+            {
+                "id": 212,
+                "nombre": "Panamá"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Tarjeta de crédito"
+    },
+    {
+        "id": 5,
+        "nombre": "Giras"
+    },
+    {
+        "id": 6,
+        "nombre": "Reuniones Presenciales"
+    },
+    {
+        "id": 7,
+        "nombre": "Macbooks"
+    },
+    {
+        "id": 8,
+        "nombre": "Gastos en aperturas"
+    },
+    {
+        "id": 9,
+        "nombre": "Regalos y desayunos"
+    },
+    {
+        "id": 10,
+        "nombre": "Proveedores",
+        "subCategoria":[
+            {
+                "id": 1011,
+                "nombre": "Asana"
+            },
+            {
+                "id": 1012,
+                "nombre": "Slack"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "nombre": "Comisiones"
+    }
+]
