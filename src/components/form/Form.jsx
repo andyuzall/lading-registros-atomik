@@ -3,7 +3,7 @@ import style from '../form/form.css';
 import { Button, Typography } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import Footer from '../footer/Footer';
-import formSchema from '../schema/validation';
+import { formSchema } from '../schema/validation';
 
 
 const Form = ({ userData }) => {
