@@ -123,7 +123,29 @@
     },
     {
         "id": 4,
-        "nombre": "Tarjeta de crédito"
+        "nombre": "Tarjeta de crédito",
+        "subCategoria":[
+            {
+                "id": 401,
+                "nombre": "Asana"
+            },
+            {
+                "id": 402,
+                "nombre": "Slack"
+            },
+            {
+                "id": 403,
+                "nombre": "Gastos en reuniones"
+            },
+            {
+                "id": 404,
+                "nombre": "Gastos en razones sociales"
+            },
+            {
+                "id": 405,
+                "nombre": "Varios"
+            }
+        ]
     },
     {
         "id": 5,

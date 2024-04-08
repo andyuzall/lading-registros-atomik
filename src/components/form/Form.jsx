@@ -3,6 +3,7 @@ import style from '../form/form.css';
 import { Button, Typography } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import Footer from '../footer/Footer';
+import formSchema from '../schema/validation';
 
 
 const Form = ({ userData }) => {
@@ -42,6 +43,10 @@ const Form = ({ userData }) => {
         event.preventDefault();
         setSending(true);
         try {
+          const validationResult = formSchema.safeParse(formData)
+
+          if(validationResult.success) {
+
           const formEle = document.querySelector("form");
           const dataBase = new FormData(formEle);
           const res = await fetch('https://script.google.com/macros/s/AKfycbyWb7XGDQe2TA5Y41kg_l4gCECFPEROnVKx1FxJxIcAonV8iZE9kX2CNupDKeKGDhpD/exec', {
@@ -64,6 +69,9 @@ const Form = ({ userData }) => {
           } else {
             throw new Error('Error al enviar los datos');
           }
+        } else {
+          console.error('Errores de validación:', validationResult.error);
+        }
         } catch (error) {
           console.log(error);
         };
@@ -84,6 +92,7 @@ const Form = ({ userData }) => {
                </Typography>
                 <select 
                 className='input'
+                type='text'
                 name='categoria' 
                 id='categoria'
                 value={formData.categoria}
@@ -103,6 +112,7 @@ const Form = ({ userData }) => {
                                     <label htmlFor="subCategoria" className='divs-form'>
                                         <select
                                             className='input'
+                                            type='type'
                                             onChange={handleInputChange}
                                             name='subCategoria'
                                             id='subCategoria'
@@ -128,6 +138,7 @@ const Form = ({ userData }) => {
                                     <label htmlFor="pais" className='divs-form'>
                                         <select
                                             className='input'
+                                            type='text'
                                             onChange={handleInputChange}
                                             value={formData.pais}
                                             name='pais'
@@ -162,7 +173,7 @@ const Form = ({ userData }) => {
                              Fecha de registro
                             </Typography>
                             <input 
-                                type='date' 
+                                type='text' 
                                 id='fechaRegistro'
                                 name='fechaRegistro'
                                 className='input'
@@ -173,6 +184,7 @@ const Form = ({ userData }) => {
                             </label>
                             <label htmlFor="observaciones" className='divs-form'>
                               <textarea 
+                                type='text'
                                 className='observaciones'
                                 name='observaciones'
                                 id='observaciones'
