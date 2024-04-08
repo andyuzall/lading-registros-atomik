@@ -173,7 +173,7 @@ const Form = ({ userData }) => {
                              Fecha de registro
                             </Typography>
                             <input 
-                                type='text' 
+                                type='date'
                                 id='fechaRegistro'
                                 name='fechaRegistro'
                                 className='input'
