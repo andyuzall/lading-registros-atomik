@@ -12,7 +12,6 @@ const Form = ({ userData }) => {
     const [selectedOption, setSelectedOption] = useState('');
     const [sending, setSending] = useState(false);
     const [success, setSuccess] = useState(false);
-    const currentDate = new Date();
     const [formData, setFormData] = useState({
         categoria: '',
         subCategoria: '',
@@ -20,7 +19,6 @@ const Form = ({ userData }) => {
         subTipo: '',
         pais: '',
         costo: '',
-        fechaRegistro: currentDate.toISOString(),
         observaciones: ''
     })
     useEffect(() => {
@@ -52,6 +50,10 @@ const Form = ({ userData }) => {
 
           const formEle = document.querySelector("form");
           const dataBase = new FormData(formEle);
+          
+          const currentDate = new Date();
+          dataBase.append('fechaRegistro', currentDate.toISOString());
+
           const res = await fetch('https://script.google.com/macros/s/AKfycbyWb7XGDQe2TA5Y41kg_l4gCECFPEROnVKx1FxJxIcAonV8iZE9kX2CNupDKeKGDhpD/exec', {
             method: "POST",
             body: dataBase
