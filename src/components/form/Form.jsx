@@ -128,6 +128,32 @@ const Form = ({ userData }) => {
                                 </div>
                             )
                         ))}
+                         {categorias.map(categoria => (
+                          selectedOption === categoria.nombre && categoria["subCategoria"] && formData.subCategoria && (
+                              categoria["subCategoria"].map(subcategoria => (
+                                  formData.subCategoria === subcategoria.nombre && subcategoria["tipo"] && (
+                                      <div className='divs-form' key={subcategoria.id}>
+                                          <label htmlFor="tipoSubCategoria" className='divs-form'>
+                                              <select
+                                                  className='input'
+                                                  type='type'
+                                                  onChange={handleInputChange}
+                                                  name='tipoSubCategoria'
+                                                  id='tipoSubCategoria'
+                                                  value={formData.tipoSubCategoria}
+                                                  required
+                                              >
+                                                  <option value="">Seleccione el tipo de subcategoría</option>
+                                                  {subcategoria["tipo"].map(tipo => (
+                                                      <option key={tipo.id} value={tipo.nombre}>{tipo.nombre}</option>
+                                                  ))}
+                                              </select>
+                                          </label>
+                                      </div>
+                    )
+                ))
+            )
+        ))}
                         </>
                     )}
                     {selectedOption && (

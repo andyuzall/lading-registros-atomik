@@ -173,11 +173,157 @@
         "subCategoria":[
             {
                 "id": 1011,
-                "nombre": "Asana"
+                "nombre": "DSP's",
+                "tipo": [
+                    {
+                        "id": 1111,
+                        "nombre": "Display & Video 360"
+                    },
+                    {
+                        "id": 1112,
+                        "nombre": "MGID"
+                    },
+                    {
+                        "id": 1113,
+                        "nombre": "Google Display"
+                    },
+                    {
+                        "id": 1114,
+                        "nombre": "Basis"
+                    },
+                    {
+                        "id": 1115,
+                        "nombre": "Zeta"
+                    },
+                    {
+                        "id": 1116,
+                        "nombre": "Acuity"
+                    },
+                    {
+                        "id": 1117,
+                        "nombre": "Propeller"
+                    },
+                    {
+                        "id": 1118,
+                        "nombre": "Adsmovil"
+                    },
+                    {
+                        "id": 1119,
+                        "nombre": "GroovinAds"
+                    },
+                    {
+                        "id": 1120,
+                        "nombre": "MediaMath"
+                    },
+                    {
+                        "id": 1121,
+                        "nombre": "TikTok"
+                    }
+                ]
             },
             {
                 "id": 1012,
-                "nombre": "Slack"
+                "nombre": "SSP's",
+                "tipo": [
+                    {
+                        "id": 1113,
+                        "nombre": "Equativ"
+                    },
+                    {
+                        "id": 1114,
+                        "nombre": "Pubmatic"
+                    },
+                    {
+                        "id": 1115,
+                        "nombre": "Azerion"
+                    },
+                    {
+                        "id": 1116,
+                        "nombre": "Loopme"
+                    },
+                    {
+                        "id": 1117,
+                        "nombre": "Triton"
+                    }
+                ]
+            },
+            {
+                "id": 1013,
+                "nombre": "DMP's",
+                "tipo": [
+                    {
+                        "id": 1213,
+                        "nombre": "Lotame"
+                    },
+                    {
+                        "id": 1214,
+                        "nombre": "Retargetly"
+                    }
+                ]
+            },
+            {
+                "id": 1014,
+                "nombre": "CMP's",
+                "tipo": [
+                    {
+                        "id": 1313,
+                        "nombre": "Celtra"
+                    },
+                    {
+                        "id": 1414,
+                        "nombre": "Seenthis"
+                    },
+                    {
+                        "id": 1515,
+                        "nombre": "Spaceback"
+                    },
+                    {
+                        "id": 1616,
+                        "nombre": "Primo"
+                    },
+                    {
+                        "id": 1717,
+                        "nombre": "Connected Stories"
+                    },
+                    {
+                        "id": 1817,
+                        "nombre": "Studio"
+                    },
+                    {
+                        "id": 1917,
+                        "nombre": "GroovinAds"
+                    },
+                    {
+                        "id": 1107,
+                        "nombre": "Airtory"
+                    },
+                    {
+                        "id": 1117,
+                        "nombre": "Bannernow"
+                    },
+                    {
+                        "id": 1127,
+                        "nombre": "Adzymic"
+                    }
+                ]
+            },
+            {
+                "id": 1015,
+                "nombre": "Prov. Formatos",
+                "tipo": [
+                    {
+                        "id": 1413,
+                        "nombre": "Prodooh"
+                    },
+                    {
+                        "id": 1414,
+                        "nombre": "Latin Ad"
+                    },
+                    {
+                        "id": 1415,
+                        "nombre": "Taggify"
+                    }
+                ]
             }
         ]
     },
