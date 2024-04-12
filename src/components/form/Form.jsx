@@ -12,6 +12,7 @@ const Form = ({ userData }) => {
     const [selectedOption, setSelectedOption] = useState('');
     const [sending, setSending] = useState(false);
     const [success, setSuccess] = useState(false);
+    const currentDate = new Date();
     const [formData, setFormData] = useState({
         categoria: '',
         subCategoria: '',
@@ -19,7 +20,7 @@ const Form = ({ userData }) => {
         subTipo: '',
         pais: '',
         costo: '',
-        fechaRegistro: new Date(),
+        fechaRegistro: currentDate.toISOString(),
         observaciones: ''
     })
     useEffect(() => {
