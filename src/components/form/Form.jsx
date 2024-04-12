@@ -15,9 +15,11 @@ const Form = ({ userData }) => {
     const [formData, setFormData] = useState({
         categoria: '',
         subCategoria: '',
+        tipoSubCategoria: '',
+        subTipo: '',
         pais: '',
         costo: '',
-        fechaRegistro: '',
+        fechaRegistro: new Date(),
         observaciones: ''
     })
     useEffect(() => {
@@ -57,9 +59,10 @@ const Form = ({ userData }) => {
             setFormData({
               categoria: '',
               subCategoria: '',
+              tipoSubCategoria: '',
+              subTipo: '',
               pais: '',
               costo: '',
-              fechaRegistro: '',
               observaciones: ''
           });
             setSuccess(true);
@@ -150,11 +153,41 @@ const Form = ({ userData }) => {
                                               </select>
                                           </label>
                                       </div>
-                    )
-                ))
-            )
-        ))}
-                        </>
+                                    )
+                                ))
+                            )
+                        ))}
+                        {categorias.map(categoria => (
+                        selectedOption === categoria.nombre && categoria["subCategoria"] && formData.subCategoria && formData.tipoSubCategoria && (
+                            categoria["subCategoria"].map(subcategoria => (
+                                formData.subCategoria === subcategoria.nombre && subcategoria["tipo"] && (
+                                    subcategoria["tipo"].map(tipo => (
+                                        formData.tipoSubCategoria === tipo.nombre && tipo["subTipo"] && (
+                                            <div className='divs-form' key={tipo.id}>
+                                                <label htmlFor="subTipo" className='divs-form'>
+                                                    <select
+                                                        className='input'
+                                                        type='type'
+                                                        onChange={handleInputChange}
+                                                        name='subTipo'
+                                                        id='subTipo'
+                                                        value={formData.subTipo}
+                                                        required
+                                                    >
+                                                        <option value="">Seleccione el subtipo</option>
+                                                        {tipo["subTipo"].map(subTipo => (
+                                                            <option key={subTipo.id} value={subTipo.nombre}>{subTipo.nombre}</option>
+                                                        ))}
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        )
+                                    ))
+                                )
+                            ))
+                          )
+                      ))}
+                      </>
                     )}
                     {selectedOption && (
                         <>
@@ -190,23 +223,6 @@ const Form = ({ userData }) => {
                                 onChange={handleInputChange}
                                 placeholder='Inidicar costo'
                                 />
-                            </label>
-                            <label htmlFor="fechaRegistro" className='divs-form-date'>
-                            <Typography
-                              component='h6'
-                              variant='h6'
-                            >
-                             Fecha de registro
-                            </Typography>
-                            <input 
-                                type='date'
-                                id='fechaRegistro'
-                                name='fechaRegistro'
-                                className='input'
-                                value={formData.fechaRegistro}
-                                onChange={handleInputChange}
-                                pattern='\d{4}-\d{2}-\d{2}'
-                                required />
                             </label>
                             <label htmlFor="observaciones" className='divs-form'>
                               <textarea 

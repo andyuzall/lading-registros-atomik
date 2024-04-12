@@ -177,7 +177,21 @@
                 "tipo": [
                     {
                         "id": 1111,
-                        "nombre": "Display & Video 360"
+                        "nombre": "Display & Video 360",
+                        "subTipo": [
+                            {
+                                "id": 1235,
+                                "nombre": "PHD"
+                            },
+                            {
+                                "id": 1236,
+                                "nombre": "Leadaki"
+                            },
+                            {
+                                "id": 1237,
+                                "nombre": "Skiller"
+                            }
+                        ]
                     },
                     {
                         "id": 1112,
