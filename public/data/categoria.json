@@ -11,6 +11,60 @@
                 "id": 102,
                 "nombre": "Comisiones"
             }
+        ],
+        "pais":[
+            {
+                "id": 201,
+                "nombre": "Uruguay"
+            },
+            {
+                "id": 202,
+                "nombre": "Argentina"
+            },
+            {
+                "id": 203,
+                "nombre": "Ecuador"
+            },
+            {
+                "id": 204,
+                "nombre": "Colombia"
+            },
+            {
+                "id": 205,
+                "nombre": "Paraguay"
+            },
+            {
+                "id": 206,
+                "nombre": "Chile"
+            },
+            {
+                "id": 207,
+                "nombre": "Perú"
+            },
+            {
+                "id": 208,
+                "nombre": "Honduras"
+            },
+            {
+                "id": 209,
+                "nombre": "Guatemala"
+            },
+            {
+                "id": 210,
+                "nombre": "Costa Rica"
+            },
+            {
+                "id": 211,
+                "nombre": "Republica Dominicana"
+            },
+            {
+                "id": 212,
+                "nombre": "Panamá"
+            },
+            {
+                "id": 225,
+                "nombre": "España"
+            }
         ]
     },
     {
@@ -343,6 +397,6 @@
     },
     {
         "id": 11,
-        "nombre": "Comisiones"
+        "nombre": "Rebates Directo"
     }
 ]
