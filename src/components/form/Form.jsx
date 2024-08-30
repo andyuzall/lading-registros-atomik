@@ -9,10 +9,12 @@ import { formSchema } from '../schema/validation';
 const Form = ({ userData }) => {
 
     const [categorias, setCategorias] = useState([]);
+    const [periodos, setPeriodos] = useState([]);
     const [selectedOption, setSelectedOption] = useState('');
     const [sending, setSending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [formData, setFormData] = useState({
+        periodo: '',
         categoria: '',
         subCategoria: '',
         tipoSubCategoria: '',
@@ -26,8 +28,16 @@ const Form = ({ userData }) => {
         .then(res => res.json())
         .then(data => setCategorias(data))
         .catch(error => console.error('Error al cargar las categorias:', error));
+        getPeriodos();
     }, []);
 
+
+    const getPeriodos = () => {
+        fetch('data/periodo.json')
+        .then(res => res.json())
+        .then(data => setPeriodos(data))
+        .catch(error => console.error('Error al cargar los periodos:', error));
+    }
     const handleInputChange = (event) => {
         const { id, value } = event.target;
         setFormData({ ...formData, [id]: value});
@@ -51,8 +61,6 @@ const Form = ({ userData }) => {
           const formEle = document.querySelector("form");
           const dataBase = new FormData(formEle);
           
-          const currentDate = new Date();
-          dataBase.append('fechaRegistro', currentDate.toISOString());
 
           const res = await fetch('https://script.google.com/macros/s/AKfycbyWb7XGDQe2TA5Y41kg_l4gCECFPEROnVKx1FxJxIcAonV8iZE9kX2CNupDKeKGDhpD/exec', {
             method: "POST",
@@ -60,6 +68,7 @@ const Form = ({ userData }) => {
           });
           if (res.ok) {
             setFormData({
+              periodo: '',
               categoria: '',
               subCategoria: '',
               tipoSubCategoria: '',
@@ -96,6 +105,20 @@ const Form = ({ userData }) => {
                >
                 Registro de Gastos
                </Typography>
+                <select
+                className='input'
+                type='type'
+                onChange={handleInputChange}
+                name='periodo'
+                id='periodo'
+                value={formData.periodo}
+                required
+                >
+                 <option value="">Seleccione el período</option>
+                 {periodos.map(periodo => (
+                        <option key={periodo.id} value={periodo.nombre}>{periodo.nombre}</option>
+                    ))}                                       
+                </select>
                 <select 
                 className='input'
                 type='text'
